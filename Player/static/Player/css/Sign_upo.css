@@ -1,0 +1,131 @@
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+.visibility-hidden
+{
+   visibility: hidden;
+}
+h1, .h1
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h2, .h2
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 27px;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h3, .h3
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 24px;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h4, .h4
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 21px;
+   font-style: italic;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h5, .h5
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 19px;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h6, .h6
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 16px;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+.Text box
+{
+   font-family: "Trebuchet MS";
+   font-weight: bold;
+   font-size: 19px;
+   letter-spacing: 2px;
+   text-decoration: none;
+   color: #000000;
+   background-color: #98FB98;
+   background: linear-gradient(to bottom, #98FB98 0%, #F5FFFA 100%);
+   border-radius: 5px;
+   -webkit-text-shadow: 0px 2px 0px rgba(72,61,139,1.00);
+   -moz-text-shadow: 0px 2px 0px rgba(72,61,139,1.00);
+   text-shadow: 0px 2px 0px rgba(72,61,139,1.00);
+   background-position: radial-gradient(circle at 25% 25%, 0%, 100%);
+}
+.Button
+{
+   font-family: "Comic Sans MS";
+   font-weight: bold;
+   font-size: 24px;
+   letter-spacing: 2px;
+   text-decoration: none;
+   color: #4B0082;
+   background-color: #98FB98;
+   background: radial-gradient(circle, #87CEFA 0%, #98FB98 100%);
+   border-radius: 12px;
+   -webkit-text-shadow: 0px 2px 0px rgba(72,61,139,1.00);
+   -moz-text-shadow: 0px 2px 0px rgba(72,61,139,1.00);
+   text-shadow: 0px 2px 0px rgba(72,61,139,1.00);
+   background-position: radial-gradient(circle at 25% 25%, 0%, 100%);
+}

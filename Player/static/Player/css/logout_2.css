@@ -1,0 +1,65 @@
+body
+{
+   background-color: #FFFFFF;
+   background-image: url(../files/index_bkgrnd.png);
+   background-repeat: repeat-x;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+#Banner1
+{
+   background-color: transparent;
+   background-image: url(../files/index_Banner1_bkgrnd.png);
+   background-repeat: repeat;
+   background-position: left top;
+   border: 1px solid #245580;
+   color: #FFE4B5;
+   font-family: "Kristen ITC";
+   font-weight: bold;
+   font-size: 48px;
+   text-align: center;
+   margin: 0;
+}
+#Banner1 span
+{
+   display: block;
+   height: 48px;
+   margin: 100px 0px 365px 0px;
+}
+#Banner1 .single-char
+{
+   float: left;
+}
+#Banner1 div
+{
+   display: inline-block;
+   text-align: center;
+}
+.Banner1_ShowAnimation
+{
+   -webkit-animation: (None) 400ms linear 0s 1 normal both;
+   -moz-animation: (None) 400ms linear 0s 1 normal both;
+   animation: (None) 400ms linear 0s 1 normal both;
+}
+.Banner1_HideAnimation
+{
+}
+#wb_Form1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+}
+#Button1
+{
+   margin: 0;
+}
+#Button2
+{
+   margin: 0;
+}

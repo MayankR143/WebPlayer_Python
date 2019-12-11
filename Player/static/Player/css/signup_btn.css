@@ -1,0 +1,34 @@
+body
+{
+   background-color: #000000;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+#Button1
+{
+   margin: 0;
+}
+#Editbox1:focus
+{
+   border-color: #00BFFF;
+   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(0,191,255,0.60);
+   outline: 0;
+}
+#Editbox1::placeholder
+{
+   color: #696969;
+   opacity: 1;
+}
+#Editbox1::-ms-input-placeholder
+{
+   color: #696969;
+}
+#Button2
+{
+   margin: 0;
+}

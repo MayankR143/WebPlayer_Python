@@ -1,0 +1,39 @@
+/*****************************************
+  upload button styles
+******************************************/
+.file-upload {
+	position: relative;
+	display: inline-block;
+}
+
+.file-upload__label {
+  
+  padding: 1em 2em;
+  color: #66f;
+  background: #222;
+  border-radius: .4em;
+  transition: background .3s;
+  background-color:#cfc;
+  
+  &:hover {
+     cursor: pointer;
+     background: #fff;
+  }
+}
+    
+.file-upload__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1;
+    width:0;
+    height: 100%;
+    opacity: 0;
+	
+}
+
+/*****************************************
+ design styles
+******************************************/

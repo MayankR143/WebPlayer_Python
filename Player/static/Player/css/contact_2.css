@@ -1,0 +1,50 @@
+body
+{
+   background-color: #A9A9A9;
+   background-image: url(../files/index_bkgrnd.png);
+   background-repeat: repeat-x;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+#Shape1
+{
+   border-width: 0;
+   vertical-align: top;
+}
+#wb_TextArt1 a img
+{
+   position: absolute;
+   left: 0;
+}
+#wb_TextArt1 span
+{
+   position: absolute;
+   left: 0;
+}
+#wb_TextArt1 a .hover
+{
+   visibility: hidden;
+}
+#wb_TextArt1 a:hover .hover
+{
+   visibility: visible;
+}
+#wb_TextArt1 a:hover span
+{
+   visibility: hidden;
+}
+#TextArt1
+{
+   border-width: 0;
+   vertical-align: top;
+}
+#TextArt2
+{
+   border-width: 0;
+   vertical-align: top;
+}
