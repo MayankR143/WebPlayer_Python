@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Confirm Logout???</title>
+{% load static %}
+<link href="../static/Player/css/Logout.css" rel="stylesheet">
+<link href="../static/Player/css/logout_2.css" rel="stylesheet">
+<script src="../static/Player/css/jquery-1.12.4.min.js"></script>
+<script src="../static/Player/css/wb.animatetext.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#Banner1").animatetext({showDelay: 50, hideDelay: 50, showMode: 2, hideMode: 2, pause: 400});
+});
+</script>
+</head>
+<body>
+<div id="Banner1" style="position:absolute;left:249px;top:58px;width:909px;height:531px;z-index:3"><span>Do you wanna Logout ???</span></div>
+<div id="wb_Form1" style="position:absolute;left:405px;top:289px;width:644px;height:247px;z-index:4;">
+<form name="Confirm" method="get" action="logout"id="Form1">
+<input type="submit" name="yes" value="Yes" class="button" style="position:absolute;left:19px;top:23px;width:264px;height:154px;z-index:0;">
+<input type="submit" name="no" value="No" class="button" style="position:absolute;left:254px;top:23px;width:264px;height:154px;z-index:1;">
+</form>
+</div>
+</body>
+</html>

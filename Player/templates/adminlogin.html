@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+{% load static %}
+<title>Admin Login</title>
+<link rel="stylesheet" href="../static/Player/css/menu_btn.css">
+    <link rel="stylesheet" type="text/css" href="../static/Player/css/Reg_font.css" />
+    <link rel="stylesheet" type="text/css" href="../static/Player/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../static/Player/css/menu_btn.css">
+
+<style>
+body {
+	font: 11px/1.4em Verdana, Arial, Helvetica, sans-serif;
+	background-color:#000000;
+}
+h1 {
+	color: #99CC00;
+	margin: 0px 0px 5px;
+	padding: 0px 0px 3px;
+	font: bold 18px Verdana, Arial, Helvetica, sans-serif;
+	border-bottom: 1px dashed #E6E8ED;
+}
+#container1 {
+    background-color: transparent;
+	
+	background-size:650px 750px;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+.centered-form {
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+.centered-form .panel {
+    background: rgba(255, 255, 255, 0.8);
+ box-shadow: rgba(255, 10, 50, 0.8) 3px 3px 20px;}
+</style>
+</head>
+<body text="#000000" bgcolor="#000000" link="#0000FF" alink="#FF0000" vlink="#800080">
+
+<div class="container">
+<h1 align="center">Login</h1>
+		<div class="row centered-form">
+		
+			<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4" height="300" width="200">
+			
+				<div class="panel panel-default">
+                    <div class="panel-heading">
+
+                        <h3 class="panel-title text-center">Admin Login Form </h3>
+                    </div>
+                    <div class="panel-body"><center>
+                        <form role="form" action="admin_validate" method="post">{% csrf_token %}
+                            <div class="form-group">
+                                <input type="text" name="uname" id="uname" class="form-control input-sm" placeholder="Username" required>
+                            </div>
+							<div class="form-group">
+                                <input type="password" name="pass" id="pass" class="form-control input-sm" placeholder="Enter password..." required>
+                            </div>
+                            <input type="submit" value="Login" class="btn btn-info btn-block"><br/>
+							<div class="form-group font-face pull-left"> 
+							Don't have an account ???<br/>
+							<button background-color="ff0525" class="btn  btn-block"><a href="registration.html" class=" input-sm">Sign Up</a></button><br/>
+							</div>
+						</form></center>
+						
+                    </div>
+                  
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </div>
+    
+</div>
+
+</body>
+
+</html>

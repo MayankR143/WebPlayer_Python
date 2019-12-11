@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Upload</title>
+{% load static %}
+<link rel="stylesheet" href="../static/Player/css/change.css" type="text/css"/>
+<link rel="stylesheet" href="../static/Player/css/btn.css" type="text/css"/>
+ <link rel="stylesheet" href="../static/Player/css/menu_btn.css">
+
+<style type="text/css">
+
+.upload_file{
+font-family: 'helvetica neue', 'arial', sans-serif;
+   font-size: 20px;
+   font-weight: bold;
+   padding-top: 5em;
+   -webkit-font-smoothing: antialiased;
+   text-align: center;
+   
+}
+body{
+background-color:#000000;
+}
+</style>
+</head>
+<body>
+<section class="" style="position:absolute;top:15px;left:400;">
+    <nav>
+      <ul>
+        <li><a href="media.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li  class="active"><a href="upload.html">Upload</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </section>
+<center><br/><br/><br/><br/><br/><br/>
+<form action="upload_media" method="post" enctype='multipart/form-data'>
+{% csrf_token %}
+{{ form.as_p }}
+<div class="file-upload upload_file" >
+<br/>
+	
+    <label for="upload" class="file-upload__label">Select File...</label>
+    <input id="upload" class="file-upload__input" type="file" name="file-upload">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Upload" class="button"/>
+</div>
+</form>
+</center>
+</body>
+</html>

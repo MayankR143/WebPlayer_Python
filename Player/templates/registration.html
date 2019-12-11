@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/Player/css/Reg_font.css" />
+    <link rel="stylesheet" type="text/css" href="../static/Player/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../static/Player/css/menu_btn.css">
+	<link rel="stylesheet" href="../static/Player/css/contact_2.css">
+
+<style>
+body {
+	font: 11px/1.4em Verdana, Arial, Helvetica, sans-serif;
+	background-color:#000000;
+}
+h1 {
+	color: #99CC00;
+	margin: 0px 0px 5px;
+	padding: 0px 0px 3px;
+	font: bold 18px Verdana, Arial, Helvetica, sans-serif;
+	border-bottom: 1px dashed #E6E8ED;
+}
+#container1 {
+    background-color: transparent;
+	
+	background-size:650px 750px;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+.centered-form {
+    margin-top: 100px;
+    margin-bottom:100px;
+}
+
+.centered-form .panel {
+    background: rgba(255, 255, 255, 0.8);
+ box-shadow: rgba(255, 10, 50, 0.8) 3px 3px 20px;}
+</style>
+</head>
+<body text="#000000" bgcolor="#000000" link="#0000FF" alink="#FF0000" vlink="#800080">
+
+<div class="container">
+
+<h1 align="center">Registration Form</h1>
+ <div class="container" id="container1">
+	<section class="container" style="position:absolute;top:300;">
+					<nav>
+						<ul>
+								<li><a href="media.html">Home</a></li>
+								<li><a href="login.html">Login</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+        
+						</ul>
+					</nav>
+		</section>
+        <div class="row centered-form">
+		
+            <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4" height="300" width="200">
+			
+                <div class="panel panel-default">
+				
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">Registration Form </h3>
+						{% if msg %}
+						<br/><font color="red"><h5>{{msg}}</h5></font>{% endif %}
+						
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" action="register" method="post">{% csrf_token %}
+                            <div class="form-group">
+                                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name" required>
+                            </div>
+							<div class="form-group">
+                                <input type="text" name="uname" id="uname" class="form-control input-sm" placeholder="Userame" required>
+                            </div><br/><br/>
+                            <div class="form-group">
+                                <input type="text" name="phone" id="phone" class="form-control input-sm" placeholder="Phone Number.." required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="country" id="country" class="form-control input-sm" placeholder="Country.." required>
+                            </div><br/><br/>
+                            <div class="form-group">
+                                <input type="text" name="address" id="address" class="form-control input-sm" placeholder="Address.." required>
+                            </div><br/><br/>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="city" id="city" class="form-control input-sm" placeholder="City.." required>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="zip" id="zip" class="form-control input-sm" placeholder="Zip.." required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="bio" id="bio" class="form-control input-sm" placeholder="About Yourself.." required>
+                            </div>
+                            <br/><br/>
+                            <div class="form-group">
+                                <input type="email" name="email-1" id="last_name" class="form-control input-sm" placeholder="Your Email.." required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" name="email-2" id="email" class="form-control input-sm" placeholder="Repeat Email Address" required>
+                            </div>
+							
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password" required>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password" required>
+                                    </div>
+                                </div>
+                            </div>
+							<br/>
+                            <input type="submit" value="Register" class="btn btn-info btn-block">
+							<div class="form-group font-face pull-left"> <br/>
+							
+							Have an account ???<br/>
+							<button background-color="ff0525" class="btn  btn-block"><a href="login.html" class=" input-sm">Login</a></button><br/>
+							</div>
+                        </form>
+                    </div>
+                  
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </div>
+    
+</div>
+
+</body>
+
+</html>

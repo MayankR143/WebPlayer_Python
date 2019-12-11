@@ -1,0 +1,70 @@
+<html>
+{% load static %}
+<head><title>Users...</title>
+<meta charset="utf-8">
+<title>Users...</title>
+<link href="../static/Player/css/media.css" rel="stylesheet">
+<link href="../static/Player/css/media_2.css" rel="stylesheet">
+<link href="../static/Player/css/contact_2.css" rel="stylesheet">
+<link rel="stylesheet" href="../static/Player/css/menu_btn.css">
+
+</head>
+<body>
+<section class="container" style="">
+    <nav>
+      <ul>
+        <li class="active"><a href="displayusers.html">Users</a></li>
+        <li><a href="admin_gallery.html">Gallery</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </section>
+<br/><br/><br/>
+<form method="post" action="sortUser" style="">{% csrf_token %}
+<select name="sort"><option selected value="byAscDate">Latest</option>
+<option value="byDscDate">By Older</option>
+<option value="byAscName">Asccending to Name</option>
+<option value="byDscName">Desccending to Name</option></select>
+<input type="submit" value="Sort" class="btn" align="left"/>
+</form>
+<form method="get" action="searchUser">
+<input type="text" name="data"><br/>
+<input type="submit" value="search">
+</form><br/><br/>
+{% if userDetails %}
+<label class="uname" for="" id="Label1" style="position:absolute;left:200px;width:180px;height:36px;line-height:28px;z-index:0;">Username :</label>
+<label class="uname" for="" id="Label1" style="position:absolute;left:700px;width:180px;height:36px;line-height:28px;z-index:0;">{{userDetails.uname}}</label><br/><br/>
+<label class="uname" for="" id="Label1" style="position:absolute;left:200px;width:180px;height:36px;line-height:28px;z-index:0;">First Name:</label>
+<label class="name" for="" id="Label2" style="position:absolute;left:500px;width:428px;height:30px;line-height:22px;z-index:1;">{{userDetails.fname}}</label><br/><br/>
+<label class="uname" for="" id="Label1" style="position:absolute;left:200px;width:180px;height:36px;line-height:28px;z-index:0;">Last Name: :</label>
+<label class="name" for="" id="Label2" style="position:absolute;left:500px;width:428px;height:30px;line-height:22px;z-index:1;">{{userDetails.lname}}</label><br/><br/>
+<label class="uname" for="" id="Label1" style="position:absolute;left:200px;width:180px;height:36px;line-height:28px;z-index:0;">Phone: :</label>
+<label class="name" for="" id="Label2" style="position:absolute;left:500px;width:428px;height:30px;line-height:22px;z-index:1;">{{userDetails.phone}}</label><br/><br/>
+<label class="uname" for="" id="Label1" style="position:absolute;left:200px;width:180px;height:36px;line-height:28px;z-index:0;">Email :</label>
+<label class="name" for="" id="Label2" style="position:absolute;left:500px;width:428px;height:30px;line-height:22px;z-index:1;">{{userDetails.email}}</label><br/><br/>
+<label class="uname" for="" id="Label1" style="position:absolute;left:200px;width:180px;height:36px;line-height:28px;z-index:0;">Bio :</label>
+<label class="name" for="" id="Label2" style="position:absolute;left:500px;width:428px;height:30px;line-height:22px;z-index:1;">{{userDetails.bio}}</label><br/><br/>
+<label class="uname" for="" id="Label1" style="position:absolute;left:200px;width:180px;height:36px;line-height:28px;z-index:0;">Address :</label>
+<label class="name" for="" id="Label2" style="position:absolute;left:500px;width:428px;height:30px;line-height:22px;z-index:1;">{{userDetails.address}}</label><br/><br/><br/><br/>
+<label class="uname" for="" id="Label1" style="position:absolute;left:200px;width:180px;height:36px;line-height:28px;z-index:0;">City :</label>
+<label class="name" for="" id="Label2" style="position:absolute;left:500px;width:428px;height:30px;line-height:22px;z-index:1;">{{userDetails.city}}</label><br/><br/>
+<label class="uname" for="" id="Label1" style="position:absolute;left:200px;width:180px;height:36px;line-height:28px;z-index:0;">Zip :</label>
+<label class="name" for="" id="Label2" style="position:absolute;left:500px;width:428px;height:30px;line-height:22px;z-index:1;">{{userDetails.zip}}</label><br/><br/>
+<label class="uname" for="" id="Label1" style="position:absolute;left:200px;width:180px;height:36px;line-height:28px;z-index:0;">countrty :</label>
+<label class="name" for="" id="Label2" style="position:absolute;left:500px;width:428px;height:30px;line-height:22px;z-index:1;">{{userDetails.country}}</label><br/><br/><br/><br/><br/>
+{% endif%}
+{% for user in users %}
+<div id="wb_Form1" style="position:absolute;left:28px;width:1573px;height:36px;z-index:9;">
+<form name="Users" method="get" action="del_user" enctype="text/plain" accept-charset="UTF-8" id="Form1">{% csrf_token %}
+<input type="hidden" name="delete_u" value="{{user.uname}}" id="delete_u">
+<label class="uname" for="" id="Label1" style="position:absolute;left:31px;width:180px;height:36px;line-height:28px;z-index:0;">{{user.uname}}</label>
+<label class="name" for="" id="Label2" style="position:absolute;left:701px;width:428px;height:30px;line-height:22px;z-index:1;">{{user.lname}}</label>
+<label class="play_btn" for="" id="Label6" onclick="window.location.href='showUserDetails?user={{user.uname}}';return false;" style="position:absolute;left:1250px;width:100px;height:35px;line-height:27px;z-index:7;">View</label>
+<input type="submit" id="Button1" name="" value="Delete" class="delete_btn" style="position:absolute;left:1370px;width:169px;height:33px;z-index:2;">
+</form>
+</div>
+<label class="name" for="" id="Label3" style="position:absolute;left:262px;width:428px;height:30px;line-height:22px;z-index:10;">{{user.fname}}</label>
+<br/><br/><br/>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+{% load static %}
+<head>
+<title>Gallery</title>
+<link href="../static/Player/css/media.css" rel="stylesheet">
+<link href="../static/Player/css/media_2.css" rel="stylesheet">
+<link href="../static/Player/css/contact_2.css" rel="stylesheet">
+<link rel="stylesheet" href="../static/Player/css/menu_btn.css">
+
+</head>
+<body>
+<section class="container" style="">
+    <nav>
+      <ul>
+        <li><a href="media.html">Home</a></li>
+        <li class="active"><a href="gallery.html">Gallery</a></li>
+        <li><a href="upload.html">Upload</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </section>
+<br/><br/><br/><br/>
+{% if file %}
+<center>
+
+<video width="800" height="450" autoplay="true" controls>
+  <source src="../../videos/{{file.file}}">
+</video></center>
+{% endif %}
+{% if umedia %}
+<form method="post" action="sort" style="">{% csrf_token %}
+<select name="sort"><option selected value="byAscDate">Latest</option>
+<option value="byDscDate">By Older</option>
+<option value="byAscName">Asccending to Name</option>
+<option value="byDscName">Desccending to Name</option></select>
+<input type="hidden" name="gallery_page" value="gallery_page">
+<input type="submit" value="Sort" class="btn" align="left"/>
+</form>
+<form method="get" action="search">
+<input type="text" name="data"><br/>
+<input type="hidden" name="gallery_page" value="gallery_page">
+<input type="submit" value="search">
+</form><br/><br/><br/><br/>
+{% if user%}
+<label class="my_title" for="" id="Label1" style="position:absolute;left:40px;top:20;width:150px;height:36px;line-height:28px;z-index:0;">Welcome, {{user}}</label><br/><br/>
+{% endif %}
+{% for m in umedia %}
+<div id="wb_Form3" style="position:absolute;left:28px;width:1573px;height:36px;z-index:12;">
+<form name="play" method="post" action="play" accept-charset="UTF-8" id="Form3">{% csrf_token %}
+<input type="hidden" name="play_f" value="{{m.id}}" id="play_f">
+<input type="hidden" name="gallery_page" value="gallery_page">
+<input type="submit" id="Button3" name="submit" value="Play" class="play_btn" style="position:absolute;left:984px;top:2px;width:169px;height:33px;z-index:5;">
+<label class="uname" for="" id="Label5" style="position:absolute;left:29px;top:0px;width:921px;height:36px;line-height:28px;z-index:6;">{{m.f_name}}</label>
+<label class="play_btn" for="" id="Label6" onclick="window.location.href='f_delete?delete_f={{m.id}}';return false;" style="position:absolute;left:1265px;top:0px;width:179px;height:35px;line-height:27px;z-index:7;">Delete</label>
+</form>
+</div><br/><br/><br/>
+{% endfor %}
+{% endif %}
+</body>
+</html>
